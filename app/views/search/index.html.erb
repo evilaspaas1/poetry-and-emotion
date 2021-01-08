@@ -1,0 +1,20 @@
+<nav class="navbar" role="navigation">
+  <div class="navbar-header">
+    <h2 class ="navbar-brand">Search Results</h2>
+  </div>
+
+  <div class="search-results">
+    <% @poems.each do |poem| %>
+      <div class='poem'>
+        <h4 class='title'><%= poem.title %></h4>
+        <p class='author'><%= poem.author %></p>
+        <ul class='tones'>
+          <% poem.tones.each do |tone| %>
+            <li><%= tone %></li>
+          <% end %>
+        </ul>
+        <p class='text'><%= poem.full_text %></p>
+      </div>
+    <% end %>
+  </div>
+</nav>
